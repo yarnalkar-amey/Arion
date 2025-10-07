@@ -18,7 +18,7 @@ export const requireAdmin = async (req, res, next) => {
       return res.status(403).json({ message: "Forbidden: Admins only" });
     }
 
-    next(); // ✅ critical
+    next(); 
   } catch (error) {
     console.error("Admin check failed:", error);
     return res.status(500).json({ message: "Internal Server Error" });
