@@ -1,8 +1,7 @@
 import { useAuth, useUser } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
-import type {ReactNode} from "react"
+import type { ReactNode } from "react";
 import axiosInstance from "@/Utils/axios";
-import { Loader } from "lucide-react";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -56,7 +55,9 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   if (loading) {
     return (
       <div className="h-screen w-screen flex items-center justify-center">
-        <Loader className="w-8 h-8 text-emerald-500 animate-spin" />
+        <div className="flex flex-col items-center">
+          <div className="w-10 h-10 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
+        </div>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import logo from "../assets/ChatGPT Image Oct 16, 2025, 09_08_13 AM.png";
 import { LayoutDashboardIcon } from "lucide-react";
 import { SignedIn, SignedOut, SignOutButton } from "@clerk/clerk-react";
 import SignInOAuthButton from "../components/SignInOAuthButton";
+import { Button } from "./ui/button";
 
 
 const Topbar = () => {
@@ -28,7 +29,9 @@ const Topbar = () => {
         </SignedOut>
 
         <SignedIn>
-            <SignOutButton/>
+            <SignOutButton>
+              <Button variant="secondary" className="">Logout</Button>
+            </SignOutButton>
         </SignedIn>
       </div>
     </div>

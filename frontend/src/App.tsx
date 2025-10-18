@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router"
 import Home from "./pages/Home/Home"
 import AuthCallback from "./pages/Auth-callback/Auth-Callback"
-import { AuthenticateWithRedirectCallback } from "@clerk/clerk-react"
+import SSOCallback from "./components/ssoCallback"
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Route path="/auth-callback" element={<AuthCallback/>}/>
       <Route
         path="/sso-callback"
-        element={<AuthenticateWithRedirectCallback />}
+        element={<SSOCallback/>}
       />
     </Routes>
    </>
