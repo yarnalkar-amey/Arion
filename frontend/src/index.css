@@ -111,6 +111,31 @@
 }
 
 @layer base {
+  :root {
+    --color-arion-light: #d9e6f2;
+    --color-arion-mid: #6ba3d8;
+    --color-arion-dark: #2e6db4;
+    --color-arion-glow: #00c8ff;
+
+    /* ✨ The full gradient */
+    --gradient-arion: linear-gradient(
+      to bottom,
+      var(--color-arion-light),
+      var(--color-arion-mid),
+      var(--color-arion-dark)
+    );
+  }
+
+  /* Optional: darker version for dark mode */
+  .dark {
+    --color-arion-light: #bfd8ea;
+    --color-arion-mid: #4e8fcb;
+    --color-arion-dark: #1e4a8e;
+    --color-arion-glow: #00aeef;
+  }
+}
+
+@layer base {
   * {
     @apply border-border outline-ring/50;
   }
